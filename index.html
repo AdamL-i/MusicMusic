@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>音乐播放器</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="./css/audio.css" />
+</head>
+
+<body background="./img/bg0.png">
+    <!-- 修改：直接给body加background -->
+    <!-- <div id="body" background="./img/bg0.png"> -->
+    <!-- 上半部分 -->
+    <div class="upper-container">
+        <!-- 唱片 -->
+        <div class="record-container">
+            <div class="record-bg">
+                <div id="record-img" class="rotate-play"></div>
+            </div>
+        </div>
+        <!-- 右边的歌曲名 -->
+        <div class="introduction-container">
+            <div class="text-container">
+                <div class="music-title">音乐1</div>
+                <div class="author-container">
+                    作者：
+                    <span class="author-name">adam
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 下半部分控件 -->
+    <div class="bottom-container">
+        <!-- 音乐 -->
+        <audio id="audioTag"></audio>
+        <!-- 进度条 -->
+        <div class="progress"></div>
+        <!-- 控制按钮 -->
+        <div class="controls">
+            <div class="timer-container">
+                <span class="played-time">00:00</span>
+                &nbsp;/&nbsp;
+                <span class="audio-time">00:00</span>
+            </div>
+            <div class="center-container">
+                <!-- 播放模式 -->
+                <div class="playMode center-icon"></div>
+                <!-- 上一首 -->
+                <div class="beforeMusic center-icon"></div>
+                <!-- 播放暂停 -->
+                <div class="playPause center-icon icon-play"></div>
+                <!-- 下一首 -->
+                <div class="nextMusic center-icon"></div>
+                <!-- 音量 -->
+                <div class="volumn center-icon"></div>
+                <!-- 音量进度条 -->
+                <input type="range" id="volumn-togger" value="70" min="0" max="100" step="1" />
+            </div>
+            <div class="right-container">
+                <!-- MV -->
+                <div id="MV" class="bottom-icon"></div>
+                <!-- 倍速 -->
+                <div id="speed">1.0X</div>
+                <!-- 列表 -->
+                <div id="list" class="bottom-icon"></div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <div class="close-container"></div>
+    <div class="list-container">
+        <div class="musicListTitle">播放列表</div>
+        <hr>
+        <div class="musicLists"></div>
+    </div>
+</body>
+
+</html>
+<script src="./js/audio.js"></script>
